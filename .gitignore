@@ -1,1 +1,7 @@
+# Ignore Mac files with icon and background info created by Finder
 *.DS_Store
+
+#Ignore History file with history of command
+.Rhistory
+
+#To ignore the whole folder input "output/"
