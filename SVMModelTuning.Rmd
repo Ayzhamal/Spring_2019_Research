@@ -14,24 +14,24 @@ suppressMessages(library(e1071))
 ```
 
 ```{r}
-training <- read.csv('https://raw.githubusercontent.com/OliShawn/KmerResearch/master/4merTable/Train/4mertable.train.txt',header = TRUE)
-training <- training[,names(training) != "DNA"]
+training <- read.csv('https://raw.githubusercontent.com/Ayzhamal/Spring_2019_Research/master/datasets/dixon_h1esc%20dataset/training_set.csv',header = TRUE)
+#training <- training[,names(training) != "DNA"]
 #head(training)
 training <- training[sample(nrow(training), nrow(training)), ] #randomizes the rows
-training$Class[training$Class == "1"] <- "negative"
-training$Class[training$Class == "0"] <- "positive"
-training$Class <- factor(training$Class)
+#training$Class[training$Class == "1"] <- "negative"
+#training$Class[training$Class == "0"] <- "positive"
+training$class <- factor(training$class)
 ```
 
 ```{r}
-testing = read.csv("https://raw.githubusercontent.com/OliShawn/KmerResearch/master/4merTable/Test/4mertable.test.txt")
-testing <- testing[,names(testing) != "DNA"]
+testing = read.csv("https://raw.githubusercontent.com/Ayzhamal/Spring_2019_Research/master/datasets/dixon_h1esc%20dataset/testing_set.csv")
+#testing <- testing[,names(testing) != "DNA"]
 #Data$Class <- factor(Data$Class)
 testing <- testing[sample(nrow(testing), nrow(testing)), ] #randomizes the rows
-testing$Class[testing$Class == "1"] <- "negative"
-testing$Class[testing$Class == "0"] <- "positive"
+#testing$Class[testing$Class == "1"] <- "negative"
+#testing$Class[testing$Class == "0"] <- "positive"
 #intrain <- createDataPartition(y = Data$Class,p = 0.8,list = FALSE) #split data
-testing$Class <- factor(testing$Class)
+testing$class <- factor(testing$class)
 ```
 
 ## R functions for SVM models
@@ -61,7 +61,7 @@ do.RadialKernelSVM <- function(training)
   sigma=sigest(as.matrix(tmpTraining)) # sigest returns 3 values of sigma 
   grid <- expand.grid(sigma = sigma , C = 2^seq(from=-4,by = 1, to =8)) # set up sigma and cost parameters
   ctrl.cross <- trainControl(method = "cv", number = 5,classProbs = TRUE,savePredictions=TRUE)
-  svm.Fit <- train(class ~ ., data= training,perProc = c("center", "scale"),
+  svm.Fit <- caret::train(class ~ ., data= training,
       method = 'svmRadial', 
       metric ='Accuracy',
       tuneGrid= grid,
