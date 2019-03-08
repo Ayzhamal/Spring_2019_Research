@@ -1,0 +1,55 @@
+[1] 0.03827952
+[1] "CM for Log Reg, alpha = 0.5 Sensitivity...:"
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    512  330
+    real      165  347
+                                          
+               Accuracy : 0.6344          
+                 95% CI : (0.6081, 0.6601)
+    No Information Rate : 0.5             
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.2688          
+ Mcnemar's Test P-Value : 1.69e-13        
+                                          
+            Sensitivity : 0.7563          
+            Specificity : 0.5126          
+         Pos Pred Value : 0.6081          
+         Neg Pred Value : 0.6777          
+             Prevalence : 0.5000          
+         Detection Rate : 0.3781          
+   Detection Prevalence : 0.6219          
+      Balanced Accuracy : 0.6344          
+                                          
+       'Positive' Class : random          
+                                          
+[1] "CM for Log Reg, alpha = 0.5 Precision...:"
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    512  330
+    real      165  347
+                                          
+               Accuracy : 0.6344          
+                 95% CI : (0.6081, 0.6601)
+    No Information Rate : 0.5             
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.2688          
+ Mcnemar's Test P-Value : 1.69e-13        
+                                          
+              Precision : 0.6081          
+                 Recall : 0.7563          
+                     F1 : 0.6741          
+             Prevalence : 0.5000          
+         Detection Rate : 0.3781          
+   Detection Prevalence : 0.6219          
+      Balanced Accuracy : 0.6344          
+                                          
+       'Positive' Class : random          
+                                          
+Area under the curve: 0.72

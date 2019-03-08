@@ -61,7 +61,7 @@ do.RadialKernelSVM <- function(training)
   sigma=sigest(as.matrix(tmpTraining)) # sigest returns 3 values of sigma 
   grid <- expand.grid(sigma = sigma , C = 2^seq(from=-4,by = 1, to =8)) # set up sigma and cost parameters
   ctrl.cross <- trainControl(method = "cv", number = 5,classProbs = TRUE,savePredictions=TRUE)
-  svm.Fit <- train(class ~ ., data= training,perProc = c("center", "scale"),
+  svm.Fit <- caret::train(class ~ ., data= training,perProc = c("center", "scale"),
       method = 'svmRadial', 
       metric ='Accuracy',
       tuneGrid= grid,

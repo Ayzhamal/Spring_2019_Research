@@ -3,7 +3,7 @@
 ############################################################################
 # Read in our training and testing data
 library(data.table)
-training <- read.csv("https://raw.githubusercontent.com/Ayzhamal/Spring_2019_Research/master/datasets/small_dataset/TrainingSet40.csv",header = TRUE)
+training <- read.csv("https://raw.githubusercontent.com/Ayzhamal/Spring_2019_Research/master/datasets/rao_huvec_10kb%20dataset/training_set.csv",header = TRUE)
 training <- data.frame(training)
 #training <- training[,names(training) != "DNA"] # use this line if you want to remove the 'name' of each row
 training <- training[sample(nrow(training), nrow(training)), ] #randomizes the rows
@@ -13,7 +13,7 @@ training$class <- factor(training$class)
 
 
 #Preparing testing data
-testing = read.csv("https://raw.githubusercontent.com/Ayzhamal/Spring_2019_Research/master/datasets/small_dataset/TestingSet8.csv", header = TRUE)
+testing = read.csv("https://raw.githubusercontent.com/Ayzhamal/Spring_2019_Research/master/datasets/rao_huvec_10kb%20dataset/testing_set.csv", header = TRUE)
 testing <- data.frame(testing)
 #testing <- testing[,names(testing) != "DNA"] # use this line if you want to remove the 'name' of each row
 testing <- testing[sample(nrow(testing), nrow(testing)), ] #randomizes the rows
@@ -66,15 +66,14 @@ print(cm)
 cm <- confusionMatrix(Pred, testing$class, mode = "prec_recall") # will show Precision, Recall, F1 Score
 print("CM for RF: Recall...") 
 print(cm)
+saveRDS(rf.Fit, "RF.Rds") #saves the model to an rds file
 
 install.packages("pROC")
 library('pROC')
-result.roc <- plot(roc(testing$class, Pred$real))
+#Pred<-data.frame(v1<-(Pred))
+result.roc <- plot(roc(testing$class, Pred$v1))
 plot(result.roc, print.thres="best", print.thres.best.method="closest.topleft")
 auc(result.roc)
-
-
-saveRDS(rf.Fit, "RF.Rds") #saves the model to an rds file
 #############################################################################
 
 

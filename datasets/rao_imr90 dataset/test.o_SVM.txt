@@ -1,0 +1,108 @@
+line search fails -1.554778 0.04218025 1.212796e-05 -4.318029e-06 -2.681551e-08 6.299733e-09 -3.524199e-13line search fails -1.287859 -0.08146858 1.703598e-05 -4.78854e-06 -2.815895e-08 4.236906e-09 -5.000039e-13Support Vector Machines with Radial Basis Function Kernel 
+
+6096 samples
+ 171 predictor
+   2 classes: 'random', 'real' 
+
+No pre-processing
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 4876, 4877, 4877, 4876, 4878 
+Resampling results across tuning parameters:
+
+  sigma        C         Accuracy   Kappa    
+  0.001400186    0.0625  0.7122724  0.4245264
+  0.001400186    0.1250  0.7230976  0.4461797
+  0.001400186    0.2500  0.7288384  0.4576592
+  0.001400186    0.5000  0.7317926  0.4635699
+  0.001400186    1.0000  0.7409794  0.4819458
+  0.001400186    2.0000  0.7445172  0.4890331
+  0.001400186    4.0000  0.7496776  0.4993451
+  0.001400186    8.0000  0.7511565  0.5023023
+  0.001400186   16.0000  0.7478740  0.4957367
+  0.001400186   32.0000  0.7410877  0.4821603
+  0.001400186   64.0000  0.7419685  0.4839270
+  0.001400186  128.0000  0.7340936  0.4681733
+  0.001400186  256.0000  0.7362246  0.4724358
+  0.006959168    0.0625  0.7140782  0.4281290
+  0.006959168    0.1250  0.7158827  0.4317417
+  0.006959168    0.2500  0.7221157  0.4442109
+  0.006959168    0.5000  0.7288426  0.4576701
+  0.006959168    1.0000  0.7398309  0.4796499
+  0.006959168    2.0000  0.7450775  0.4901412
+  0.006959168    4.0000  0.7434393  0.4868650
+  0.006959168    8.0000  0.7411426  0.4822711
+  0.006959168   16.0000  0.7414709  0.4829266
+  0.006959168   32.0000  0.7431105  0.4862044
+  0.006959168   64.0000  0.7422904  0.4845629
+  0.006959168  128.0000  0.7378618  0.4757048
+  0.006959168  256.0000  0.7339256  0.4678297
+  0.036022326    0.0625  0.6981629  0.3962877
+  0.036022326    0.1250  0.7017719  0.4035054
+  0.036022326    0.2500  0.7037414  0.4074432
+  0.036022326    0.5000  0.7094816  0.4189227
+  0.036022326    1.0000  0.7198161  0.4395956
+  0.036022326    2.0000  0.7209638  0.4418900
+  0.036022326    4.0000  0.7211282  0.4422184
+  0.036022326    8.0000  0.7208004  0.4415619
+  0.036022326   16.0000  0.7230956  0.4461504
+  0.036022326   32.0000  0.7237519  0.4474630
+  0.036022326   64.0000  0.7232606  0.4464819
+  0.036022326  128.0000  0.7226050  0.4451702
+  0.036022326  256.0000  0.7227687  0.4454977
+
+Accuracy was used to select the optimal model using the largest value.
+The final values used for the model were sigma = 0.001400186 and C = 8.
+[1] "CM for SVM: Sensitivity..."
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    583  201
+    real      179  561
+                                          
+               Accuracy : 0.7507          
+                 95% CI : (0.7281, 0.7722)
+    No Information Rate : 0.5             
+    P-Value [Acc > NIR] : <2e-16          
+                                          
+                  Kappa : 0.5013          
+ Mcnemar's Test P-Value : 0.2814          
+                                          
+            Sensitivity : 0.7651          
+            Specificity : 0.7362          
+         Pos Pred Value : 0.7436          
+         Neg Pred Value : 0.7581          
+             Prevalence : 0.5000          
+         Detection Rate : 0.3825          
+   Detection Prevalence : 0.5144          
+      Balanced Accuracy : 0.7507          
+                                          
+       'Positive' Class : random          
+                                          
+[1] "CM for SVM: Recall..."
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    583  201
+    real      179  561
+                                          
+               Accuracy : 0.7507          
+                 95% CI : (0.7281, 0.7722)
+    No Information Rate : 0.5             
+    P-Value [Acc > NIR] : <2e-16          
+                                          
+                  Kappa : 0.5013          
+ Mcnemar's Test P-Value : 0.2814          
+                                          
+              Precision : 0.7436          
+                 Recall : 0.7651          
+                     F1 : 0.7542          
+             Prevalence : 0.5000          
+         Detection Rate : 0.3825          
+   Detection Prevalence : 0.5144          
+      Balanced Accuracy : 0.7507          
+                                          
+       'Positive' Class : random          
+                                          
+Area under the curve: 0.8318

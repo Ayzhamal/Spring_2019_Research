@@ -1,0 +1,123 @@
+C5.0 
+
+5570 samples
+ 385 predictor
+   2 classes: 'random', 'real' 
+
+Pre-processing: centered (385), scaled (385) 
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 4456, 4456, 4456, 4456, 4456 
+Resampling results across tuning parameters:
+
+  trials  Accuracy   Kappa    
+   1      0.6624776  0.3249551
+   3      0.6673250  0.3346499
+   5      0.6701975  0.3403950
+   7      0.6633752  0.3267504
+   9      0.6664273  0.3328546
+  11      0.6675045  0.3350090
+  13      0.6675045  0.3350090
+  15      0.6675045  0.3350090
+  17      0.6675045  0.3350090
+  19      0.6675045  0.3350090
+  21      0.6675045  0.3350090
+  23      0.6675045  0.3350090
+  25      0.6675045  0.3350090
+  27      0.6675045  0.3350090
+  29      0.6675045  0.3350090
+  31      0.6675045  0.3350090
+  33      0.6675045  0.3350090
+  35      0.6675045  0.3350090
+  37      0.6675045  0.3350090
+  39      0.6675045  0.3350090
+  41      0.6675045  0.3350090
+  43      0.6675045  0.3350090
+  45      0.6675045  0.3350090
+  47      0.6675045  0.3350090
+  49      0.6675045  0.3350090
+  51      0.6675045  0.3350090
+  53      0.6675045  0.3350090
+  55      0.6675045  0.3350090
+  57      0.6675045  0.3350090
+  59      0.6675045  0.3350090
+  61      0.6675045  0.3350090
+  63      0.6675045  0.3350090
+  65      0.6675045  0.3350090
+  67      0.6675045  0.3350090
+  69      0.6675045  0.3350090
+  71      0.6675045  0.3350090
+  73      0.6675045  0.3350090
+  75      0.6675045  0.3350090
+  77      0.6675045  0.3350090
+  79      0.6675045  0.3350090
+  81      0.6675045  0.3350090
+  83      0.6675045  0.3350090
+  85      0.6675045  0.3350090
+  87      0.6675045  0.3350090
+  89      0.6675045  0.3350090
+  91      0.6675045  0.3350090
+  93      0.6675045  0.3350090
+  95      0.6675045  0.3350090
+  97      0.6675045  0.3350090
+  99      0.6675045  0.3350090
+
+Tuning parameter 'model' was held constant at a value of tree
+Tuning
+ parameter 'winnow' was held constant at a value of FALSE
+Accuracy was used to select the optimal model using the largest value.
+The final values used for the model were trials = 5, model = tree and winnow
+ = FALSE.
+[1] "CM for Boosted: Sensitivity..."
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    458  202
+    real      238  494
+                                          
+               Accuracy : 0.6839          
+                 95% CI : (0.6588, 0.7083)
+    No Information Rate : 0.5             
+    P-Value [Acc > NIR] : <2e-16          
+                                          
+                  Kappa : 0.3678          
+ Mcnemar's Test P-Value : 0.0952          
+                                          
+            Sensitivity : 0.6580          
+            Specificity : 0.7098          
+         Pos Pred Value : 0.6939          
+         Neg Pred Value : 0.6749          
+             Prevalence : 0.5000          
+         Detection Rate : 0.3290          
+   Detection Prevalence : 0.4741          
+      Balanced Accuracy : 0.6839          
+                                          
+       'Positive' Class : random          
+                                          
+[1] "CM for Boosted: Recall..."
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    458  202
+    real      238  494
+                                          
+               Accuracy : 0.6839          
+                 95% CI : (0.6588, 0.7083)
+    No Information Rate : 0.5             
+    P-Value [Acc > NIR] : <2e-16          
+                                          
+                  Kappa : 0.3678          
+ Mcnemar's Test P-Value : 0.0952          
+                                          
+              Precision : 0.6939          
+                 Recall : 0.6580          
+                     F1 : 0.6755          
+             Prevalence : 0.5000          
+         Detection Rate : 0.3290          
+   Detection Prevalence : 0.4741          
+      Balanced Accuracy : 0.6839          
+                                          
+       'Positive' Class : random          
+                                          
+Area under the curve: 0.7511

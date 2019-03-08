@@ -1,0 +1,114 @@
+Random Forest 
+
+7736 samples
+ 179 predictor
+   2 classes: 'random', 'real' 
+
+Pre-processing: centered (179), scaled (179) 
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 6189, 6189, 6188, 6189, 6189 
+Resampling results across tuning parameters:
+
+  mtry  Accuracy   Kappa    
+    4   0.6931249  0.3862478
+    8   0.6962272  0.3924538
+   12   0.7016555  0.4033091
+   16   0.6966148  0.3932284
+   20   0.6998461  0.3996870
+   24   0.6957091  0.3914188
+   28   0.7006217  0.4012430
+   32   0.6960978  0.3921955
+   36   0.6968736  0.3937442
+   40   0.7030788  0.4061588
+   44   0.7006219  0.4012421
+   48   0.7017857  0.4035724
+   52   0.6986830  0.3973652
+   56   0.7011394  0.4022783
+   60   0.7012676  0.4025318
+   64   0.7011395  0.4022777
+   68   0.6968735  0.3937501
+   72   0.6985536  0.3971069
+   76   0.7028194  0.4056398
+   80   0.6977777  0.3955552
+   84   0.7010099  0.4020183
+   88   0.6999761  0.3999526
+   92   0.6988134  0.3976282
+   96   0.6953227  0.3906444
+  100   0.7028185  0.4056333
+  104   0.7010094  0.4020164
+  108   0.6981657  0.3963299
+  112   0.7010094  0.4020234
+  116   0.6989416  0.3978820
+  120   0.6997167  0.3994346
+  124   0.6958396  0.3916763
+  128   0.6995873  0.3991745
+  132   0.7019142  0.4038252
+  136   0.7007516  0.4015033
+  140   0.7015267  0.4030515
+  144   0.6957096  0.3914198
+  148   0.6986825  0.3973648
+  152   0.6999746  0.3999497
+  156   0.7026905  0.4053815
+  160   0.6975203  0.3950415
+  164   0.7008803  0.4017617
+  168   0.6989411  0.3978782
+  172   0.7001039  0.4002082
+  176   0.7032061  0.4064127
+  180   0.6995874  0.3991723
+
+Accuracy was used to select the optimal model using the largest value.
+The final value used for the model was mtry = 176.
+[1] "CM for RF: Sensitivity...:"
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    565  167
+    real      402  800
+                                         
+               Accuracy : 0.7058         
+                 95% CI : (0.6849, 0.726)
+    No Information Rate : 0.5            
+    P-Value [Acc > NIR] : < 2.2e-16      
+                                         
+                  Kappa : 0.4116         
+ Mcnemar's Test P-Value : < 2.2e-16      
+                                         
+            Sensitivity : 0.5843         
+            Specificity : 0.8273         
+         Pos Pred Value : 0.7719         
+         Neg Pred Value : 0.6656         
+             Prevalence : 0.5000         
+         Detection Rate : 0.2921         
+   Detection Prevalence : 0.3785         
+      Balanced Accuracy : 0.7058         
+                                         
+       'Positive' Class : random         
+                                         
+[1] "CM for RF: Recall..."
+Confusion Matrix and Statistics
+
+          Reference
+Prediction random real
+    random    565  167
+    real      402  800
+                                         
+               Accuracy : 0.7058         
+                 95% CI : (0.6849, 0.726)
+    No Information Rate : 0.5            
+    P-Value [Acc > NIR] : < 2.2e-16      
+                                         
+                  Kappa : 0.4116         
+ Mcnemar's Test P-Value : < 2.2e-16      
+                                         
+              Precision : 0.7719         
+                 Recall : 0.5843         
+                     F1 : 0.6651         
+             Prevalence : 0.5000         
+         Detection Rate : 0.2921         
+   Detection Prevalence : 0.3785         
+      Balanced Accuracy : 0.7058         
+                                         
+       'Positive' Class : random         
+                                         
+Area under the curve: 0.7718
